@@ -1,4 +1,4 @@
---[[ Globals ]]--
+--[[ Globals ]] --
 
 local globals = {
 	autoformat = false,
@@ -16,7 +16,7 @@ for key, value in pairs(globals) do
 	vim.g[key] = value
 end
 
---[[ Options ]]--
+--[[ Options ]] --
 
 local opts = {
 	number = true,
@@ -50,15 +50,15 @@ for key, value in pairs(opts) do
 	vim.opt[key] = value
 end
 
---[[ Keymaps ]]--
+--[[ Keymaps ]] --
 
 local keymaps = {
 	{ "n", "<leader>E",  vim.cmd.Exp,                      { desc = "Open file [E]xplorer" } },
 	{ "n", "<leader>bp", vim.cmd.bprevious,                { desc = "Switch to previous buffer" } },
 	{ "n", "<leader>bn", vim.cmd.bnext,                    { desc = "Switch to next buffer" } },
 	{ "n", "<leader>bd", vim.cmd.bdelete,                  { desc = "Delete current buffer" } },
-	{ "n", "<leader>bb", ":buffers<CR>:b",                 { desc = "Display all buffers" } },
-	{ "n", "<leader>z",  "",                               { desc = "Toggle fold" } },
+	{ "n", "<leader>t", vim.cmd.terminal,                 { desc = "Open terminal" } },
+	{ "n", "<leader>bb", ":buffers<CR>:b ",                { desc = "Display all buffers" } },
 	{ "v", "J",          ":m '>+1<CR>gv=gv" },
 	{ "v", "K",          ":m '<-2<CR>gv=gv" },
 
@@ -84,11 +84,11 @@ for _, map in pairs(keymaps) do
 	vim.keymap.set(mode, lhs, rhs, opts)
 end
 
---[[ Autocmds ]]--
+--[[ Autocmds ]] --
 
 local autocmds = {
-	{ "TextYankPost", "Highlight when yanking (copying) text",                       function() vim.highlight.on_yank() end },
-	{ "BufEnter",     "Update the file so diagnostics show upon entenring a buffer", function() vim.cmd("e") end }
+	{ "TextYankPost", "Highlight when yanking (copying) text", function() vim.highlight.on_yank() end },
+	--	{ "BufEnter",     "Update the file so diagnostics show upon entenring a buffer", function() vim.cmd("e") end }
 }
 
 for _, map in pairs(autocmds) do
@@ -99,7 +99,7 @@ for _, map in pairs(autocmds) do
 	})
 end
 
---[[ Package Manager: lazy.nvim ]]--
+--[[ Package Manager: lazy.nvim ]] --
 
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
