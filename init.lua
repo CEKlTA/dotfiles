@@ -1,4 +1,4 @@
---[[ Globals ]] --
+--[[ Globals ]]--
 
 local globals = {
 	autoformat = false,
@@ -16,7 +16,7 @@ for key, value in pairs(globals) do
 	vim.g[key] = value
 end
 
---[[ Options ]] --
+--[[ Options ]]--
 
 local opts = {
 	number = true,
@@ -50,7 +50,7 @@ for key, value in pairs(opts) do
 	vim.opt[key] = value
 end
 
---[[ Keymaps ]] --
+--[[ Keymaps ]]--
 
 local keymaps = {
 	{ "n", "<leader>E",  vim.cmd.Exp,                      { desc = "Open file [E]xplorer" } },
@@ -84,7 +84,7 @@ for _, map in pairs(keymaps) do
 	vim.keymap.set(mode, lhs, rhs, opts)
 end
 
---[[ Autocmds ]] --
+--[[ Autocmds ]]--
 
 local autocmds = {
 	{ "TextYankPost", "Highlight when yanking (copying) text", function() vim.highlight.on_yank() end },
@@ -99,7 +99,7 @@ for _, map in pairs(autocmds) do
 	})
 end
 
---[[ Package Manager: lazy.nvim ]] --
+--[[ Package Manager: lazy.nvim ]]--
 
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
