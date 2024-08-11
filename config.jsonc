@@ -1,0 +1,53 @@
+{
+  // "margin-top": 16,
+  // "width": 1024,
+  "position": "bottom",
+  "start-hidden": true,
+  "modules-left": [
+    "custom/power",
+    "hyprland/workspaces"
+  ],
+  "modules-center": [
+    "clock",
+    "tray"
+  ],
+  "modules-right": [
+    "cpu",
+    "memory",
+    "temperature",
+    "custom/weather"
+  ],
+  "tray": {
+    "icon-size": 16,
+    "spacing": 10
+  },
+  "custom/power": {
+    "format": " ",
+    "on-double-click": "shutdown now",
+    "tooltip": false
+  },
+  "cpu": {
+    "format": "  {usage}% "
+  },
+  "clock": {
+    "format": "{:%H:%M:%S}",
+    "interval": 1,
+    "tooltip": true,
+    "tooltip-format": "{:%a %d/%m/%y}"
+  },
+  "memory": {
+    "format": "  {used}GiB ",
+    "tooltip": false
+  },
+  "temperature": {
+    "format": " {temperatureC}°C ",
+    "hwmon-path": "/sys/class/hwmon/hwmon1/temp1_input",
+    "tooltip": false
+  },
+  "custom/weather": {
+    "format": "  {}",
+    "interval": 3600,
+    "exec": "curl 'https://wttr.in/?format=%t'",
+    "tooltip": false
+  }
+}
