@@ -1,4 +1,4 @@
-# My Dotfile
+# My Dotfiles
 
 ### every configuration is only 1 file!
 
