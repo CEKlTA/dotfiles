@@ -1,0 +1,92 @@
+{
+  "position": "bottom",
+  "start-hidden": true,
+  "reload_style_on_change": true,
+  "modules-left": [
+    "custom/power",
+    "hyprland/workspaces",
+    "custom/divisor",
+    "custom/invaders"
+  ],
+  "modules-center": [
+    "tray"
+  ],
+  "modules-right": [
+    "custom/divisor",
+    "network",
+    "pulseaudio",
+    "cpu",
+    "memory",
+    "temperature",
+    "custom/weather",
+    "battery",
+    "clock"
+  ],
+  "custom/power": {
+    "format": "<span font='22px'></span>",
+    "on-double-click": "shutdown now",
+    // "on-couble-click-right": "shutdown -r now",
+    "tooltip": false
+  },
+  "custom/divisor": {
+    "format": " ",
+    "tooltip": false
+  },
+  "custom/invaders": {
+    "format": "<span font='20px'>{}</span>",
+    "tooltip": true,
+    "exec": "~/Programming/scripts/invaders.sh",
+    "interval": 1,
+    "tooltip-format": "sentime"
+  },
+  "tray": {
+    "icon-size": 20,
+    "spacing": 10
+  },
+  "cpu": {
+    "format": " {usage}%"
+  },
+  "pulseaudio": {
+    "format": "{icon} {volume}%",
+    "format-bluetooth": " {volume}%",
+    "format-muted": "",
+    "format-icons": {
+      "default": ["", ""]
+    }
+  },
+  "clock": {
+    "timezone": "America/Argentina/Buenos_Aires",
+    "format": "{:%H:%M:%S}",
+    "interval": 1,
+    "tooltip": true,
+    "tooltip-format": "{:%a %d/%m/%y}"
+  },
+  "battery": {
+    "interval": 60,
+    "states": {
+      "warning": 20,
+      "critical": 5
+    },
+    "format": "{icon} {capacity}%",
+    "format-icons": ["󰂎", "󱊡", "󱊢", "󱊣"],
+    "format-charging": "󰂄 {capacity}%"
+  },
+  "memory": {
+    "format": " {used}GiB",
+    "tooltip": false
+  },
+  "temperature": {
+    "format": " {temperatureC}°C",
+    "hwmon-path": "/sys/class/hwmon/hwmon1/temp1_input",
+    "tooltip": false
+  },
+  "network": {
+  	"interface": "wlan0",
+  	"format-wifi": "",
+  	"format-ethernet": "󱘖 ",
+  	"format-disconnected": "",
+  	"tooltip-format-wifi": "\"{essid}\" {signalStrength}% {ipaddr}",
+  	"tooltip-format-ethernet": "",
+  	"tooltip-format-disconnected": ""
+  }
+}

@@ -1,0 +1,7 @@
+(defwidget ram []
+  (circular-progress
+    :value {EWW_RAM.used_mem_perc}
+    :thickness 5
+    :start-at 75
+  )
+)

@@ -1,0 +1,3 @@
+(defwidget temps []
+    "${round(EWW_TEMPS.K10TEMP_TCTL, 2)}°C"
+)

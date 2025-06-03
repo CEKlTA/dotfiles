@@ -1,0 +1,10 @@
+(defwidget audio []
+  (image
+    :path "./widgets/images/${audio_data.name}.svg"
+  )
+)
+
+(defpoll audio_data
+  :interval "1s"
+  "./widgets/scripts/audio.sh"
+)

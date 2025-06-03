@@ -1,0 +1,8 @@
+(defwidget cpu []
+    (circular-progress
+      :value {EWW_CPU.avg}
+      :thickness 5
+      :start-at 75
+    )
+)
+    
