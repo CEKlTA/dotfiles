@@ -1,7 +1,0 @@
-theme = "my_theme"
-
-[editor]
-line-number = "relative"
-
-[editor.file-picker]
-hidden = false

@@ -1,6 +1,0 @@
-(defwidget battery[]
-    (scale
-      :value {EWW_BATTERY.BAT1.capacity}
-      :tooltip {EWW_BATTERY.BAT1.capacity}
-    )
-)

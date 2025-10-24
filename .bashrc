@@ -3,7 +3,7 @@ eval "$(zoxide init bash)"
 source /usr/share/nvm/init-nvm.sh
 
 export EDITOR="code"
-PATH=$PATH:$HOME/Downloads/flutter/bin
+export MOZ_ENABLE_WAYLAND=1
 
 alias ls='ls -la --color=auto'
 alias grep='grep --color=auto'
@@ -16,6 +16,10 @@ format_current_git_branch() {
   if [[ -n $BRANCH ]]; then
     echo "(${BRANCH})"
   fi
+}
+
+wallpaper() {
+  echo "loadfile $1" | socat - /tmp/mpv-socket
 }
 
 GREEN='\[\e[32m\]'

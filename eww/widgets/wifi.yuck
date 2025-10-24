@@ -1,9 +1,0 @@
-(defwidget wifi []
-  {wifi_data.connected_network}
-)
-
-(defpoll wifi_data 
-  :interval "1s"
-  :initial "{}"
-  "iwctl station wlan0 show | grep -E '^\\s*(State|Connected network|IPv4 address|RSSI|TxBitrate|RxBitrate)' | sed -E 's/\\s*$//;s/(\\w+(\\s\\w+)*)\\s*(.*)/\"\\1\":\"\\3\",/;1s/^/{/;$s/,/}/' | jq -c 'with_entries(.key |= gsub(\" \"; \"_\") | .key |= ascii_downcase)'"
-)

@@ -1,3 +1,0 @@
-inherits = "rasmus"
-
-"ui.background" = { fg = "foreground" }

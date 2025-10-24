@@ -5,14 +5,14 @@
   "modules-left": [
     "custom/power",
     "hyprland/workspaces",
-    "custom/divisor",
+    // "custom/divisor",
     "custom/invaders"
   ],
   "modules-center": [
     "tray"
   ],
   "modules-right": [
-    "custom/divisor",
+    // "custom/divisor",
     "network",
     "pulseaudio",
     "cpu",
@@ -23,7 +23,7 @@
     "clock"
   ],
   "custom/power": {
-    "format": "<span font='22px'></span>",
+    "format": "<span font='22px'>\udb82\udcc7</span>",
     "on-double-click": "shutdown now",
     // "on-couble-click-right": "shutdown -r now",
     "tooltip": false
@@ -35,7 +35,7 @@
   "custom/invaders": {
     "format": "<span font='20px'>{}</span>",
     "tooltip": true,
-    "exec": "~/Programming/scripts/invaders.sh",
+    "exec-persist": "~/Programming/scripts/invaders.sh",
     "interval": 1,
     "tooltip-format": "sentime"
   },

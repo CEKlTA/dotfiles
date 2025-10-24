@@ -1,8 +1,0 @@
-(defwidget music []
-  {music}
-)
-
-(deflisten music
-  :initial ""
-  `playerctl --follow metadata --format '{{ title }}' || true`
-)

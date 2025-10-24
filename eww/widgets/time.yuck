@@ -1,3 +1,0 @@
-(defwidget time []
-    "${formattime(EWW_TIME, '%d %a %b %H:%M:%S')}"
-)

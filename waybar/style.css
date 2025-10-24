@@ -1,7 +1,6 @@
-@define-color background #0C0C0C;
+@define-color background rgba(0, 0, 0, 1);
 @define-color border rgba(136, 136, 136, 0.2);
-@define-color shadow rgba(255, 255, 255, 0);
-@define-color text #F8F8FF;
+@define-color text #BEBEC1;
 
 * {
   border: none;
@@ -16,11 +15,10 @@
   margin: 0;
   color: @text;
   min-height: 0;
-  text-shadow: 0px 0px 3px @shadow;
 }
 
 window#waybar {
-  background-color: @background;
+  /* background-color: @background; */
 }
 
 #custom-power {
