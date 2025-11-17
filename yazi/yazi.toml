@@ -4,10 +4,10 @@ show_hidden = true
 ratio = [ 0, 2, 1 ] 
 
 [opener]
-edit = [
-  { run = "hyprctl dispatch exec \"kitty ${EDITOR:-vi} \"$@\"\"", desc = "Editor", block = false, for = "unix" },
-  { run = "hyprctl dispatch exec \"kitty sudo -E ${EDITOR:-vi} \"$@\"\"", desc = "Editor Root", block = false, for = "unix" },
-]
+#edit = [
+#  { run = "hyprctl dispatch exec \"kitty ${EDITOR:-vi} \"$@\"\"", desc = "Editor", block = false, for = "unix" },
+#  { run = "hyprctl dispatch exec \"kitty sudo -E ${EDITOR:-vi} \"$@\"\"", desc = "Editor Root", block = false, for = "unix" },
+#]
 run = [
   { run = 'sh $0', desc = "Run sh", block = true, for = "unix" }
 ]

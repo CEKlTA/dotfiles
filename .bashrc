@@ -4,6 +4,7 @@ source /usr/share/nvm/init-nvm.sh
 
 export EDITOR="code"
 export MOZ_ENABLE_WAYLAND=1
+export PATH="$PATH:/home/cekita/.cargo/bin"
 
 alias ls='ls -la --color=auto'
 alias grep='grep --color=auto'
@@ -31,3 +32,4 @@ RESET='\[\e[0m\]'
 NEWLINE=$'\n'
 
 export PS1="${GREEN}\u@\h ${CYAN}\w ${YELLOW}\t ${RED}\$(format_current_git_branch)${NEWLINE}${MAGENTA}\\\$ ${RESET}"
+export PATH=/home/cekita/.local/bin:/home/cekita/.nvm/versions/node/v22.0.0/bin:/usr/local/sbin:/usr/local/bin:/usr/bin:/var/lib/flatpak/exports/bin:/usr/lib/jvm/default/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl:/home/cekita/.cargo/bin:/home/cekita/.local/share/JetBrains/Toolbox/scripts:/home/cekita/.cargo/bin
